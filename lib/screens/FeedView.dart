@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:sanguineo/components/reusableCellView.dart'; // replace with your actual path
+import 'package:sanguineo/components/reusableCellView.dart';
 
 class FeedView extends StatefulWidget {
   @override
@@ -60,7 +60,7 @@ class _FeedViewState extends State<FeedView> {
           ),
         ],
       ),
-      body: Column(
+      body: ListView(
         children: [
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 10),
@@ -89,7 +89,7 @@ class _FeedViewState extends State<FeedView> {
               ],
             ),
           ),
-          SizedBox(
+          Container(
             height: 260,
             child: ListView.builder(
               scrollDirection: Axis.horizontal,
@@ -98,7 +98,7 @@ class _FeedViewState extends State<FeedView> {
                 return Padding(
                   padding: const EdgeInsets.fromLTRB(16, 8, 16, 8),
                   child: ReusablePersonCellView(
-                    image: "images/somegirl.png", // replace with your JPG asset
+                    image: "images/somegirl.png", 
                     name: "Name $index",
                     bloodtype: "O-",
                     age: 22,
@@ -139,7 +139,7 @@ class _FeedViewState extends State<FeedView> {
               ],
             ),
           ),
-          SizedBox(
+          Container(
             height: 260,
             child: ListView.builder(
               scrollDirection: Axis.horizontal,
@@ -148,7 +148,7 @@ class _FeedViewState extends State<FeedView> {
                 return Padding(
                   padding: const EdgeInsets.fromLTRB(16, 8, 16, 8),
                   child: ReusablePersonCellView(
-                    image: "images/hospital.jpeg", // replace with your JPG asset
+                    image: "images/hospital.jpeg",
                     name: "Name $index",
                     bloodtype: "O-",
                     description:

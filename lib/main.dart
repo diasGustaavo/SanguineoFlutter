@@ -1,5 +1,9 @@
 import 'package:flutter/material.dart';
-import 'feedView.dart';
+import 'package:sanguineo/myNavigationBar.dart';
+// import your other page classes here
+// import 'screens/page2.dart';
+// import 'screens/page3.dart';
+// import 'screens/page4.dart';
 
 void main() {
   runApp(const MyApp());
@@ -15,14 +19,13 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Sanguineo',
       theme: ThemeData(
-        // Specify a new color scheme.
         colorScheme: const ColorScheme.light().copyWith(
           primary: const Color.fromARGB(255, 183, 58, 58),
           secondary: Colors.blue, // Set accent color here
         ),
         useMaterial3: true,
       ),
-      home: FeedView(),
+      home: MyNavigationBar(),
     );
   }
 }
